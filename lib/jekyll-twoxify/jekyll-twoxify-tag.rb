@@ -16,11 +16,11 @@ module Jekyll
         site_url = context["site.url"]
 
         extension = File.extname(image_path)
-        path_no_extension = File.extname(image_path).strip.downcase[1..-1]
-        image_2x_path = "#{path_no_extension}@2x#{extension}"
+        image_path_stripped = File.join(File.dirname(image_path), File.basename(image_path, extension))
+        image_2x_path = "#{image_path_stripped}@2x#{extension}"
 
         if File.exist?(image_2x_path)
-          "src=\"#{site_url}/#{image_path}\" srcset=\"#{image_2x_path}\""
+          "src=\"#{site_url}/#{image_path}\" srcset=\"#{site_url}/#{image_2x_path}\""
         else
           "src=\"#{site_url}/#{image_path}\""
         end
