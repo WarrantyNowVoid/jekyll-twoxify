@@ -66,7 +66,9 @@ Pass in image as a string:
 If `mycoolphoto@2x.jpg` exists, results in:
 
 ```
-<img src="https://mycoolwebsite.com/assets/img/mycoolphoto.jpg" srcset="https://mycoolwebsite.com/assets/img/mycoolphoto@2x.jpg 2x" />
+<img 
+  src="https://mycoolwebsite.com/assets/img/mycoolphoto.jpg" 
+  srcset="https://mycoolwebsite.com/assets/img/mycoolphoto@2x.jpg 2x" />
 ```
 
 Else:
