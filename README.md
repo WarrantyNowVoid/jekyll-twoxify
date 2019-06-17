@@ -55,7 +55,7 @@ One of two options:
 
 ### Tag
 
-Add the `twoxify` template tag to any `img` tag in place of both the `src` and `srcset` attributes, with the desired image path. The tag will output the `src` value and, if it exists in the filesystem, the `srcset` attribute with the @2x path.
+Add the `twoxify` template tag to any `img` tag in place of both the `src` and `srcset` attributes, with the desired image path. The tag will output the `src` value and, if it exists in the filesystem, the `srcset` attribute with the @2x path. It will automagically prepend the `site.url` to both paths.
 
 Pass in image as a string:
 
@@ -66,13 +66,13 @@ Pass in image as a string:
 If `mycoolphoto@2x.jpg` exists, results in:
 
 ```
-<img src="assets/img/mycoolphoto.jpg" srcset="assets/img/mycoolphoto@2x.jpg 2x" />
+<img src="https://mycoolwebsite.com/assets/img/mycoolphoto.jpg" srcset="https://mycoolwebsite.com/assets/img/mycoolphoto@2x.jpg 2x" />
 ```
 
 Else:
 
 ```
-<img src="assets/img/mycoolphoto.jpg" />
+<img src="https://mycoolwebsite.com/assets/img/mycoolphoto.jpg" />
 ```
 
 Variables or frontmatter are also supported:
