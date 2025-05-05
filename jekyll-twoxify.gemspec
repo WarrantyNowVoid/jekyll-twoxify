@@ -8,10 +8,10 @@ Gem::Specification.new do |spec|
   spec.description   = "Jekyll plugin to generate src attribute for an img tag with the given image, and also the srcset with an appropriate @2x path for the image if one exists on the filesystem."
   spec.version       = Jekyll::TwoXify::VERSION
   spec.authors       = ["Nick Pettazzoni"]
-  spec.email         = ["pettazz@gmail.com"]
+  spec.email         = ["github@n.pettazz.com"]
   spec.homepage      = "https://github.com/warrantynowvoid/jekyll-twoxify"
   spec.licenses      = ["Nonstandard"]
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r!^(test|spec|features)/!) }
   spec.require_paths = ["lib"]
-  spec.add_dependency "jekyll", "~> 3.0"
+  spec.add_dependency "jekyll", ">= 3.0"
 end
